@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
                             Intent(this, MovieListActivity::class.java).also {
                                 it.putExtra("USERNAME", binding.etUser.text.toString().trim())
                                 startActivity(it)
+                                finishAffinity()
                             }
                         }else{
                             Toast.makeText(this,res.messsage,Toast.LENGTH_SHORT).show()
